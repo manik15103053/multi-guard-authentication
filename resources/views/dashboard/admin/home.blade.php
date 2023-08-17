@@ -12,6 +12,11 @@
         <div class="row">
             <div class="col-md-8 text-center" style="margin-top:45px">
                 <h4>Admin Dashboard</h4><hr>
+                @if (Session::get('success'))
+                        <div class="alert alert-success">
+                            {{ Session::get('success') }}
+                        </div>
+                    @endif
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -27,9 +32,11 @@
                             <td>{{ Auth::guard('admin')->user()->email }}</td>
                             <td>{{ Auth::guard('admin')->user()->phone }}</td>
                             <td>
-                                <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+                                <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a> ||
                                 <form action="{{ route('admin.logout') }}" id="logout-form" method="post" class="d-none">@csrf</form>
+                                <a href="{{ route('admin.profile') }}">Profile</a>
                             </td>
+                            
                         </tr>
                     </tbody>
                 </table>

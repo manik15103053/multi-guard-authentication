@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 14, 2023 at 02:47 PM
+-- Generation Time: Aug 17, 2023 at 02:42 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -34,6 +34,7 @@ CREATE TABLE `admins` (
   `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) NOT NULL,
+  `profile_image` varchar(255) DEFAULT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -43,8 +44,8 @@ CREATE TABLE `admins` (
 -- Dumping data for table `admins`
 --
 
-INSERT INTO `admins` (`id`, `name`, `phone`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', '01770802187', 'admin@gmail.com', NULL, '$2y$10$jzwTsj/BH.3.krsiAWoEQeVBvuJPh5WJoe3ZhzXvYGk2MOfd/oWM6', NULL, NULL, NULL);
+INSERT INTO `admins` (`id`, `name`, `phone`, `email`, `email_verified_at`, `password`, `profile_image`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', '01770802184', 'admin@gmail.com', NULL, '$2y$10$xzf3Z88a.V2eKIMgZI88me.16x.RrP/tP0L3Wy1mYvSMye/H4PL1a', NULL, NULL, NULL, '2023-08-17 06:42:21');
 
 -- --------------------------------------------------------
 
